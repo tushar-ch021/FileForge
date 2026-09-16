@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="ff-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+    <linearGradient id="sheet-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#0F172A" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  
+  <!-- Rounded Badge Container -->
+  <rect width="64" height="64" rx="16" fill="url(#ff-grad)" />
+  <rect x="1" y="1" width="62" height="62" rx="15" fill="none" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1.5" />
+  
+  <!-- Layer 3 (Bottom) -->
+  <path d="M16 40 L32 48 L48 40" fill="none" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Layer 2 (Middle) -->
+  <path d="M16 31 L32 39 L48 31" fill="none" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Layer 1 (Top Solid Diamond) -->
+  <polygon points="32 14, 48 22, 32 30, 16 22" fill="url(#sheet-grad)" filter="url(#shadow)" />
+  <polygon points="32 14, 48 22, 32 30, 16 22" fill="none" stroke="#FFFFFF" stroke-width="1.2" />
+</svg>

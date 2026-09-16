@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FileForge 🛠️
 
-## Getting Started
+> **Fast, Private, In-Browser File & Developer Tools**  
+> 100% Client-Side Processing • Zero Server Uploads • Free Forever
 
-First, run the development server:
+FileForge is a production-grade web application offering 26 specialized utilities across PDF editing, image conversion, and developer workflows. All operations run directly in your browser's local sandbox using WebAssembly, Web Crypto, and the HTML5 Canvas API. Your files never leave your device.
+
+---
+
+## ✨ Features & Included Tools
+
+### 📄 PDF Tools (9 Tools)
+- **PDF Compressor**: Optimize PDF file size with real stream compression and image downsampling.
+- **PDF Merger**: Combine multiple PDF files into a single unified document with custom reordering.
+- **PDF Splitter**: Extract specific page ranges or burst all pages into individual files.
+- **PDF to Word (DOCX)**: High-fidelity document reconstruction preserving multi-column layouts, tables, typography, and scanned pages.
+- **Word to PDF**: Convert DOCX documents into clean PDF files client-side.
+- **PDF to Excel (XLSX)**: Detect tabular structures and extract data into structured spreadsheets.
+- **PDF Password / Unlock**: Decrypt password-protected PDFs locally.
+- **PDF to JPG**: Render high-res image previews for each page and download individually or as a ZIP.
+- **JPG to PDF**: Package multiple images into an organized, print-ready PDF.
+
+### 🖼️ Image Tools (7 Tools)
+- **Image Compressor**: Fine-tuned WebP/JPEG compression with visual side-by-side quality controls.
+- **Image Converter**: Convert between PNG, JPEG, WebP, AVIF, and BMP formats instantly.
+- **Image Resizer**: Dimension scaling by exact pixel dimensions or percentage with aspect ratio lock.
+- **Image Cropper**: Interactive aspect ratio cropping with grid overlays.
+- **Remove Background**: In-browser AI background removal powered by ONNX runtime.
+- **Image Metadata Cleaner**: Strip privacy-compromising EXIF, GPS, and camera metadata tags.
+- **Image to PDF**: Convert collections of images into standardized PDF documents.
+
+### 💻 Developer Tools (10 Tools)
+- **JSON Formatter**: Pretty-print, compact, sort keys, and validate JSON data.
+- **JSON Validator**: Syntax error locator and schema validation.
+- **JWT Decoder**: Inspect header, payload claims, signature status, and token expiration.
+- **Base64 Encoder / Decoder**: Safe UTF-8 Base64 conversion for strings and binary files.
+- **URL Encoder / Decoder**: Standard URL percent-encoding and decoding with component mode.
+- **UUID Generator**: Bulk v4 UUID creation with customizable formatting.
+- **RegEx Tester**: Real-time regular expression matching with flag controls and match details.
+- **Timestamp Converter**: Convert between Unix epoch timestamps and human-readable dates.
+- **Color Converter**: Seamless conversion across HEX, RGB, HSL, and HSV color models.
+- **Hash Generator**: Cryptographic hash calculation (SHA-256, SHA-512, SHA-1, MD5) using Web Crypto.
+
+---
+
+## 🔒 Privacy & Architecture
+
+FileForge adheres to a strict 3-tier client-side architecture:
+1. **Page & SEO Layer**: Next.js App Router with Server-Side Rendering, OpenGraph tags, and Schema.org JSON-LD structured data.
+2. **Interactive Tool Workspace**: Uniform reactive shells providing drag-and-drop file upload, progress indicators, error alerts, and download management.
+3. **Pure Processing Layer**: Local WebAssembly and JavaScript engines (`pdf-lib`, `pdfjs-dist`, `docx`, `write-excel-file`, `@pdfsmaller/pdf-decrypt`) executing isolated in the user's browser.
+
+**No tracking. No permanent storage. Zero server uploads.**
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18.x or higher
+- npm, pnpm, or yarn
+
+### Installation
 
 ```bash
+# Clone repository
+git clone https://github.com/tushar-ch021/FileForge.git
+
+# Enter project directory
+cd FileForge
+
+# Install dependencies
+npm install
+
+# Start local development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧪 Testing & Verification
 
-## Learn More
+FileForge includes automated test suites covering all conversion engines and workspace utilities:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Run ESLint
+npm run lint
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Build for production
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📄 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License. Free to use for personal and commercial workflows.
