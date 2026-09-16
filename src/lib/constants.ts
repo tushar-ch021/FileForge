@@ -1,9 +1,17 @@
+const getSiteUrl = () => {
+  if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
+  if (process.env.NEXT_PUBLIC_VERCEL_URL) return `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  return "https://fileforge.app";
+};
+
 export const SITE_CONFIG = {
   name: "FileForge",
   tagline: "Free, Fast & Private In-Browser Tools",
   description:
     "Production-grade all-in-one suite for PDF editing, image conversion, and developer utilities. 100% private, client-side processing with zero server uploads.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://fileforge.app",
+  url: getSiteUrl(),
   author: "FileForge Team",
   links: {
     github: "https://github.com",
